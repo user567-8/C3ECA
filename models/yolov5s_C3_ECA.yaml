@@ -1,0 +1,26 @@
+# 数据集配置
+dataset:
+  path: ""           # 数据集根目录
+  train: ""          # 训练集路径
+  val: ""            # 验证集路径
+  test: ""           # 测试集路径
+  nc: 1              # 类别数量
+  names: []          # 类别名称列表
+
+# 训练参数
+training:
+  imgsz: 640         # 图像尺寸
+  batch: 16          # 批次大小
+  epochs: 50         # 训练轮数
+  weights: ""        # 预训练权重路径
+  project: ""        # 训练结果保存路径
+
+# 模型验证
+validation:
+  conf_thres: 0.001  # 置信度阈值
+  iou_thres: 0.6     # IOU阈值
+
+# 实验跟踪 (可选)
+logging:
+  wandb_api: ""      # WandB API密钥
+  wandb_project: ""  # 项目名称
