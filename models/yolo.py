@@ -218,7 +218,7 @@ class BaseModel(nn.Module):
 class DetectionModel(BaseModel):
     """YOLOv5 detection model class for object detection tasks, supporting custom configurations and anchors."""
 
-    def __init__(self, cfg="yolov5s_C3_ECA.yaml", ch=3, nc=None, anchors=None):
+    def __init__(self, cfg="yolov5s.yaml", ch=3, nc=None, anchors=None):
         """Initializes YOLOv5 model with configuration file, input channels, number of classes, and custom anchors."""
         super().__init__()
         if isinstance(cfg, dict):
@@ -468,7 +468,7 @@ def parse_model(d, ch):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--cfg", type=str, default="yolov5s_C3_ECA.yaml", help="model.yaml")
+    parser.add_argument("--cfg", type=str, default="yolov5s.yaml", help="model.yaml")
     parser.add_argument("--batch-size", type=int, default=1, help="total batch size for all GPUs")
     parser.add_argument("--device", default="", help="cuda device, i.e. 0 or 0,1,2,3 or cpu")
     parser.add_argument("--profile", action="store_true", help="profile model speed")
