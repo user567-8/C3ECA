@@ -35,6 +35,8 @@ from models.common import (
     BottleneckCSP,
     C3Ghost,
     C3x,
+    ECABottleneck,  # 新增
+    C3_ECA,         # 新增
     Classify,
     Concat,
     Contract,
